@@ -1,0 +1,531 @@
+body {
+    background-color: #000080; 
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Crect width='10' height='10' fill='%23000099'/%3E%3Crect x='10' y='10' width='10' height='10' fill='%23000099'/%3E%3C/svg%3E");
+    font-family: "Comic Sans MS", "Trebuchet MS", Arial, sans-serif;
+    font-size: 12px;
+    color: #FFFF00;
+    margin: 0;
+    padding: 10px;
+    cursor: crosshair;
+}
+
+
+.site-banner {
+    background-color: #FF0000;
+    border: 4px ridge #FFFF00;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.site-banner h1 {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 28px;
+    color: #00FFFF;
+    text-shadow: 3px 3px 0px #FF00FF;
+    margin: 0;
+    letter-spacing: 3px;
+    animation: blink 0.8s step-end infinite;
+}
+
+.site-banner marquee {
+    color: #FFFF00;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0%, 100% { visibility: visible; }
+    50% { visibility: hidden; }
+}
+
+
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.sidebar {
+    width: 160px;
+    vertical-align: top;
+    background-color: #C0C0C0;
+    border: 3px inset #808080;
+    padding: 5px;
+}
+
+.sidebar-title {
+    background-color: #000080;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 3px 5px;
+    border: 2px outset #C0C0C0;
+    text-transform: uppercase;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 4px 0;
+    padding: 0;
+}
+
+.sidebar ul li::before {
+    content: ">> ";
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.sidebar ul li a {
+    color: #000080;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.sidebar ul li a:hover {
+    color: #FF0000;
+    background-color: #FFFF00;
+}
+
+.sidebar .hit-counter {
+    background-color: #000000;
+    color: #00FF00;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    text-align: center;
+    border: 2px inset #808080;
+    padding: 4px;
+    margin-top: 8px;
+    letter-spacing: 4px;
+}
+
+
+.main-content {
+    vertical-align: top;
+    padding: 0 10px;
+}
+
+
+.login-box {
+    background-color: #C0C0C0;
+    border: 3px outset #FFFFFF;
+    width: 280px;
+    padding: 0;
+    margin: 0 auto 15px auto;
+    
+}
+
+.login-box .titlebar {
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: #FFFFFF;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.login-box .titlebar .win-buttons {
+    display: flex;
+    gap: 2px;
+}
+
+.login-box .titlebar .win-btn {
+    width: 14px;
+    height: 14px;
+    background-color: #C0C0C0;
+    border: 2px outset #FFFFFF;
+    font-size: 8px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    line-height: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.login-box .titlebar .win-btn:active {
+    border: 2px inset #808080;
+}
+
+.login-box .login-body {
+    padding: 12px;
+}
+
+.login-box .login-body p {
+    color: #000000;
+    font-size: 11px;
+    margin: 0 0 8px 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+
+.login-box label {
+    display: block;
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    margin-bottom: 2px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 3px 4px;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px inset #808080;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+    background-color: #FFFFCC;
+    border-color: #000080;
+}
+
+
+.login-box .btn-login {
+    background-color: #C0C0C0;
+    border: 2px outset #FFFFFF;
+    color: #000000;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 8px auto 0 auto;
+}
+
+.login-box .btn-login:hover {
+    background-color: #D4D4D4;
+}
+
+.login-box .btn-login:active {
+    border: 2px inset #808080;
+    padding: 5px 19px 3px 21px; 
+}
+
+
+.login-error {
+    color: #FF0000;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Courier New", monospace;
+    animation: blink 1s step-end infinite;
+}
+
+
+hr.retro {
+    border: none;
+    border-top: 3px groove #808080;
+    margin: 10px 0;
+}
+
+hr.rainbow {
+    height: 4px;
+    border: none;
+    background: linear-gradient(
+        to right,
+        red, orange, yellow, green, cyan, blue, violet
+    );
+    margin: 8px 0;
+}
+
+
+.comment-section {
+    background-color: #EEEEEE;
+    border: 3px inset #808080;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.comment-section .section-header {
+    background: linear-gradient(to right, #FF6600, #FFCC00);
+    color: #FFFFFF;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 8px;
+    text-shadow: 1px 1px 0 #CC3300;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #FF3300;
+}
+
+.comment-section .section-header::before {
+    content: "💬 ";
+}
+
+
+.comment-form {
+    padding: 10px;
+    background-color: #DDEEFF;
+    border-bottom: 2px solid #AAAAAA;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+    width: 100%;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 12px;
+    background-color: #FFFFFF;
+    color: #333333;
+    border: 2px inset #808080;
+    padding: 4px;
+    margin-bottom: 6px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.comment-form input[type="text"]:focus,
+.comment-form textarea:focus {
+    background-color: #FFFFCC;
+    outline: 1px dotted #0000FF;
+}
+
+.comment-form textarea {
+    height: 70px;
+}
+
+.btn-comment {
+    background-color: #FF6600;
+    border: 2px outset #FFAA55;
+    color: #FFFFFF;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 16px;
+    cursor: pointer;
+}
+
+.btn-comment:hover {
+    background-color: #FF4400;
+}
+
+.btn-comment:active {
+    border: 2px inset #CC4400;
+}
+
+
+.comment-list {
+    padding: 8px 10px;
+}
+
+.comment-item {
+    background-color: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    border-left: 4px solid #FF6600;
+    padding: 6px 8px;
+    margin-bottom: 8px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 11px;
+    color: #000000;
+    position: relative;
+}
+
+.comment-item:nth-child(even) {
+    border-left-color: #0000FF;
+    background-color: #F0F8FF;
+}
+
+.comment-item:nth-child(3n) {
+    border-left-color: #009900;
+    background-color: #F0FFF0;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #0000CC;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.comment-author::before {
+    content: "★ ";
+    color: #FF9900;
+}
+
+.comment-time {
+    color: #888888;
+    font-size: 10px;
+    font-family: "Courier New", monospace;
+    float: right;
+}
+
+.comment-text {
+    margin-top: 4px;
+    line-height: 1.5;
+    color: #222222;
+}
+
+
+.comment-count {
+    display: inline-block;
+    background-color: #FF0000;
+    color: #FFFF00;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+    border: 2px solid #FFFF00;
+    padding: 1px 6px;
+    margin-left: 6px;
+    vertical-align: middle;
+    animation: blink 1.5s step-end infinite;
+}
+
+
+
+
+.visitor-badge {
+    background-color: #FFFF00;
+    border: 3px ridge #FF6600;
+    color: #FF0000;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+
+.under-construction {
+    background-color: #FFCC00;
+    border: 3px dashed #FF0000;
+    color: #000000;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 8px;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.under-construction::before {
+    content: "🚧 ";
+}
+.under-construction::after {
+    content: " 🚧";
+}
+
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.spinning-star {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    font-size: 16px;
+}
+
+
+.badge-new {
+    display: inline-block;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 1px 4px;
+    border: 1px solid #880000;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    margin-left: 3px;
+    animation: blink 1s step-end infinite;
+}
+
+
+.footer-badges {
+    text-align: center;
+    margin-top: 10px;
+    padding: 6px;
+    background-color: #C0C0C0;
+    border: 2px inset #808080;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    color: #000000;
+}
+
+.footer-badges a {
+    color: #0000FF;
+    text-decoration: underline;
+    margin: 0 4px;
+}
+
+
+.badge-88x31 {
+    display: inline-block;
+    width: 88px;
+    height: 31px;
+    border: 1px solid #000000;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 31px;
+    background-color: #003366;
+    color: #FFFFFF;
+    margin: 2px;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+}
+
+/* === SESSION BAR === */
+.session-bar {
+    background-color: #003300;
+    border: 1px solid #00FF00;
+    color: #00FF00;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.session-bar .status { color: #00FFFF; font-weight: bold; }
+
+/* === LOGOUT BUTTON === */
+.btn-logout {
+    background-color: #800000;
+    border: 2px outset #FF8888;
+    color: #FFFFFF;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+.btn-logout:active { border: 2px inset #660000; }
+
+/* === LOGIN ERROR ALERT === */
+.alert-error {
+    background-color: #800000;
+    color: #FFFFFF;
+    border: 2px solid #FF0000;
+    padding: 6px 10px;
+    font-size: 11px;
+    font-family: "Courier New", monospace;
+    margin-bottom: 10px;
+}
+
+/* === LOGIN GATE (centering) === */
+.login-gate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
