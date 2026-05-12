@@ -482,7 +482,6 @@ hr.rainbow {
     vertical-align: middle;
 }
 
-/* === SESSION BAR === */
 .session-bar {
     background-color: #003300;
     border: 1px solid #00FF00;
@@ -497,7 +496,6 @@ hr.rainbow {
 }
 .session-bar .status { color: #00FFFF; font-weight: bold; }
 
-/* === LOGOUT BUTTON === */
 .btn-logout {
     background-color: #800000;
     border: 2px outset #FF8888;
@@ -510,7 +508,6 @@ hr.rainbow {
 }
 .btn-logout:active { border: 2px inset #660000; }
 
-/* === LOGIN ERROR ALERT === */
 .alert-error {
     background-color: #800000;
     color: #FFFFFF;
@@ -521,7 +518,6 @@ hr.rainbow {
     margin-bottom: 10px;
 }
 
-/* === LOGIN GATE (centering) === */
 .login-gate {
     display: flex;
     flex-direction: column;
