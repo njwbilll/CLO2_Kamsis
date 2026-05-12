@@ -31,7 +31,7 @@ if (isset($_POST['login']) && !isset($_SESSION['logged_in'])) {
         if ($row = $result->fetch_assoc()) {
             if (password_verify($password, $row['password'])) {
                 $_SESSION['logged_in'] = true;
-                $s_SESSION['username']  = htmlspecialchars($username, ENT_QUOTES, 'UTF-8');
+                $_SESSION['username']  = htmlspecialchars($username, ENT_QUOTES, 'UTF-8');
                 header("Location: clo2_kamsis_site.php");
                 exit;
             } else {
