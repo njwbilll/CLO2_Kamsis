@@ -9,14 +9,12 @@ if ($conn->connect_error) {
     die("Koneksi DB Error: " . $conn->connect_error);
 }
 
-// ─── LOGOUT ───────────────────────────────────────────────────────────────────
 if (isset($_GET['logout'])) {
     session_destroy();
     header("Location: clo2_kamsis_site.php");
     exit;
 }
 
-// ─── LOGIN HANDLER ────────────────────────────────────────────────────────────
 $login_error = "";
 if (isset($_POST['login']) && !isset($_SESSION['logged_in'])) {
     $username = $_POST['username'] ?? '';
@@ -47,7 +45,6 @@ if (isset($_POST['login']) && !isset($_SESSION['logged_in'])) {
     }
 }
 
-// ─── GUESTBOOK (hanya kalau sudah login) ─────────────────────────────────────
 $comment_display = "";
 if (isset($_SESSION['logged_in']) && isset($_POST['send_comment'])) {
     $comment_display = htmlspecialchars($_POST['comment'], ENT_QUOTES, 'UTF-8');
@@ -70,9 +67,6 @@ if (isset($_SESSION['logged_in']) && isset($_POST['send_comment'])) {
 <div class="main-content">
 
 <?php if (!isset($_SESSION['logged_in'])): ?>
-    <!-- ══════════════════════════════════════════
-         BELUM LOGIN → hanya tampil form login
-         ══════════════════════════════════════════ -->
     <div class="login-gate">
         <div class="login-box">
             <div class="titlebar">
@@ -103,9 +97,6 @@ if (isset($_SESSION['logged_in']) && isset($_POST['send_comment'])) {
     </div>
 
 <?php else: ?>
-    <!-- ══════════════════════════════════════════
-         SUDAH LOGIN → session bar + guestbook
-         ══════════════════════════════════════════ -->
 
     <div class="session-bar">
         <span>SESSION: <span class="status"><?= $_SESSION['username'] ?></span> — AUTHENTICATED ✔</span>
@@ -116,7 +107,6 @@ if (isset($_SESSION['logged_in']) && isset($_POST['send_comment'])) {
 
     <hr class="rainbow">
 
-    <!-- Form kirim komentar + daftar komentar -->
     <div class="comment-section">
         <div class="section-header">GUESTBOOK.TXT</div>
         <div class="comment-form">
